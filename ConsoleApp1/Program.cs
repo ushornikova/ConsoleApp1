@@ -11,30 +11,26 @@ namespace ConsoleApp1
     {
         static void Main(string[] Arg)
         {
+ //бульбашковий алгоритм
             int[] someArr = {5, 9, 6, 4 };
             int maxArr = someArr[0];
-            //int[] a = new int[4];
-            for (int i=0; i < 4; i++)
+            for (int i=0; i<someArr.Length; i++)
+            { 
+            for (int j = 0; j < someArr.Length; j++)
             {
-
-                for (int j=0; j<4; j++)
+                if (someArr[i] < someArr[j])
                 {
-
-
-                    if (maxArr < someArr[j])
-                    {
-                        //Console.WriteLine(a[i]);
-                        //a[i] = someArr[j];
-                        maxArr = someArr[j];
-                        Console.WriteLine(someArr[j]);
-                        someArr[j] = maxArr;
-
-                    }
-
+                    maxArr = someArr[i];
+                    someArr[i] = someArr[j];
+                    someArr[j] = maxArr;
                 }
-               // Console.WriteLine(someArr[i]);
+                }
             }
             Console.WriteLine("max number is " + maxArr);
+            for (int i=0; i<someArr.Length; i++)
+            {
+                Console.WriteLine(someArr[i]);
+            }
             Console.ReadLine();
 
 //програма виводить найбільше число у масиві
