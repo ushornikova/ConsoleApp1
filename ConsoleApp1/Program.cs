@@ -11,29 +11,62 @@ namespace ConsoleApp1
     {
         static void Main(string[] Arg)
         {
- //бульбашковий алгоритм
-            int[] someArr = {5, 9, 6, 4 };
-            int maxArr = someArr[0];
-            for (int i=0; i<someArr.Length; i++)
-            { 
-            for (int j = 0; j < someArr.Length; j++)
-            {
-                if (someArr[i] < someArr[j])
-                {
-                    maxArr = someArr[i];
-                    someArr[i] = someArr[j];
-                    someArr[j] = maxArr;
-                }
-                }
-            }
-            Console.WriteLine("max number is " + maxArr);
-            for (int i=0; i<someArr.Length; i++)
-            {
-                Console.WriteLine(someArr[i]);
-            }
-            Console.ReadLine();
+//Create class which describe SkillPath and Asset
+            Asset asset = new Asset();
+            asset.name = "1";
+       
+        }
+            public class Asset
+        {
+            public string Name { get; set; }
 
-//програма виводить найбільше число у масиві
+            public string Description { get; set; }
+
+            public DateTime CreatedDate { get; private set; }
+
+            public Asset()
+            {
+          }
+            public Asset(string assetName)
+            {
+                name = assetName;
+            }
+
+            private int id;
+            public string name;
+
+            public class SkillPath
+            {
+                public string SkillPathName { get; set; }
+                int NumberOfAssets { get; }
+            }
+
+
+
+                        
+            //бульбашковий алгоритм
+            //int[] someArr = {5, 9, 6, 4 };
+            //int maxArr = someArr[0];
+            //for (int i=0; i<someArr.Length; i++)
+            //{ 
+            //for (int j = 0; j < someArr.Length; j++)
+            //{
+            //    if (someArr[i] < someArr[j])
+            //    {
+            //        maxArr = someArr[i];
+            //        someArr[i] = someArr[j];
+            //        someArr[j] = maxArr;
+            //    }
+            //    }
+            //}
+            //Console.WriteLine("max number is " + maxArr);
+            //for (int i=0; i<someArr.Length; i++)
+            //{
+            //    Console.WriteLine(someArr[i]);
+            //}
+            //Console.ReadLine();
+
+            //програма виводить найбільше число у масиві
             //int[] someArr = {5, 9, 10, 7};
             //int maxArr = someArr[0];
             //for (int i=1; i<4;i++)
@@ -46,9 +79,9 @@ namespace ConsoleApp1
             //}
             //Console.WriteLine(maxArr);
             //Console.ReadLine();
-            
 
-//програма зчитує те що ввів користувач і виводить на екран перший елемент
+
+            //програма зчитує те що ввів користувач і виводить на екран перший елемент
             //string[] someWord = new string[5];
             //for (int i=0; i < 5; i++)
             //{
@@ -58,21 +91,21 @@ namespace ConsoleApp1
             //Console.WriteLine(someWord[0]);
             //Console.ReadLine();
 
-//Дано масив. Определить, одинаковы ли второй и четвертый символы в нем
-//string[] someString = { "g", "h", "b", "G", "H" };
-//for (int i = 0; i < 4; i++)
-//{
-//    someString[i]= someString[i].ToLower();
-//}
-//if (someString[1]==someString[1])
-//{
-//    Console.WriteLine("the first and the last items are the same");
-//}
-//else
-//{
-//    Console.WriteLine("the first and the last items are not the same");
-//}
-//Console.ReadLine();
+            //Дано масив. Определить, одинаковы ли второй и четвертый символы в нем
+            //string[] someString = { "g", "h", "b", "G", "H" };
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    someString[i]= someString[i].ToLower();
+            //}
+            //if (someString[1]==someString[1])
+            //{
+            //    Console.WriteLine("the first and the last items are the same");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("the first and the last items are not the same");
+            //}
+            //Console.ReadLine();
 
             //програма виводить останній елемент масиву
             //int[] someString = { 1, 5, 8, 35 };
