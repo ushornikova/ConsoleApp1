@@ -11,35 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] Arg)
         {
-//Create class which describe SkillPath and Asset
-            Asset asset = new Asset();
-            asset.name = "1";
-       
-        }
-            public class Asset
-        {
-            public string Name { get; set; }
-
-            public string Description { get; set; }
-
-            public DateTime CreatedDate { get; private set; }
-
-            public Asset()
-            {
-          }
-            public Asset(string assetName)
-            {
-                name = assetName;
-            }
-
-            private int id;
-            public string name;
-
-            public class SkillPath
-            {
-                public string SkillPathName { get; set; }
-                int NumberOfAssets { get; }
-            }
+         
 
 
 
