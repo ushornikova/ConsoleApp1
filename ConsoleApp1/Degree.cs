@@ -8,7 +8,10 @@ namespace ConsoleApp1
 {
     class Degree
     {
-        public static string Bachelor;
-        public static string Master;
+        public string degreeName { get; set; }
+        public int degreeId { get; set; }
+        public Course course { get; set; }
+
+        public Degree (string name, int Id) { degreeName = name; degreeId = Id; }
     }
 }

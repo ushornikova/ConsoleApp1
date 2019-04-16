@@ -13,16 +13,15 @@ namespace ConsoleApp1
         public string studentEmail { get; set; }
         public int studentId { get; set; }
 
-        public Student(string first, string last, string email, int id) // { firstName = first; lastName = last; studentEmail = email; studentId = id; }
-           // :base (Course)
+        public Student(string first, string last, string email, int id)
         {
             firstName = first;
             lastName = last;
-            studentId = id;
             studentEmail = email;
+            studentId = id;
         }
 
-        public void info ()
+        public void info()
         {
             Console.WriteLine($"{firstName},{lastName},{studentEmail}, {studentId}");
         }
